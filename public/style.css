@@ -209,7 +209,7 @@ body {
   top: 40px;
 }
 .sale {
-  background: #000;
+  background: #0c1d4e;
   color: #fff;
   padding: 30px;
 }
@@ -472,6 +472,11 @@ body {
   margin-top: 20px;
 }
 .bill .accepted-payment {
+  margin-top: 10px;
+}
+.bill .accepted-payment .boxed-text {
+  border: 1px solid #333;
+  padding: 10px;
   margin-top: 10px;
 }
 .bill-overlay {
