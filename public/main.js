@@ -73,7 +73,7 @@ function fullNumber(x) {
 
 paypal.Button.render({
 
-    env: 'production', // Optional: specify 'sandbox' environment
+    env: 'sandbox', // Optional: specify 'sandbox' environment
 
     client: {
         sandbox:    'AeeQuc30epxndsZcys556s8BUccDPn7iphKvcVdJGRxEufT_J27f21i5YMLWZjiBEfNC23G5sA_fwvDr',
@@ -111,10 +111,10 @@ paypal.Button.render({
         // Optional: display a confirmation page here
 
         return actions.payment.execute().then(function() {
-            fbq('track', 'Purchase', {
-              value: price*quantity,
-              currency: 'USD'
-            });
+            // fbq('track', 'Purchase', {
+            //   value: price*quantity,
+            //   currency: 'USD'
+            // });
             window.location.href = "/thankyou/";
         });
 
