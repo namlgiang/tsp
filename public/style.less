@@ -230,7 +230,7 @@ body {
 //############################################################################################################################################################
 
 .sale {
-  background: #0c1d4e;
+  background: #000;
   color: #fff;
   padding: 30px;
 
@@ -247,6 +247,7 @@ body {
       font-size: 40px;
       font-weight: 600;
       position: relative;
+      color: #ffbc37;
     }
     .day:after,.hour:after,.minute:after {
       content: ":";
@@ -459,6 +460,7 @@ body {
       }
       .bill-qty { width: 40px; float: right; text-align: right;}
       .bill-subtotal { width: 80px; float: right; text-align: right;}
+      .bill-subtotal:before { content: "$"}
     }
   }
   .total {
@@ -468,6 +470,7 @@ body {
     .bill-total {
       float: right;
     }
+    .bill-total:before { content: "$"}
   }
   #paypal-button {
     margin-top: 20px;
@@ -552,6 +555,9 @@ body {
     .label {
       width: 100px;
       box-sizing: border-box;
+    }
+    .value {
+      width: 200px;
     }
   }
 
