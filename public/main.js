@@ -73,7 +73,7 @@ function fullNumber(x) {
 
 paypal.Button.render({
 
-    env: 'sandbox', // Optional: specify 'sandbox' environment
+    env: 'production', // Optional: specify 'sandbox' environment
 
     client: {
         sandbox:    'AeeQuc30epxndsZcys556s8BUccDPn7iphKvcVdJGRxEufT_J27f21i5YMLWZjiBEfNC23G5sA_fwvDr',
