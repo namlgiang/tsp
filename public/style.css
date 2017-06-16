@@ -340,10 +340,14 @@ body {
   font-size: 14px;
   margin-bottom: 20px;
 }
+.buy .quantity .row {
+  overflow: hidden;
+  margin-bottom: 5px;
+}
 .buy .quantity .row > * {
   float: left;
   width: 160px;
-  margin-bottom: 5px;
+  margin: 0;
 }
 .buy .quantity .label {
   text-transform: uppercase;
@@ -371,7 +375,6 @@ body {
   border: 1px solid #000;
   -webkit-appearance: none;
   -webkit-border-radius: 0;
-  margin: 0;
   padding: 10px 0 11px;
   text-align: center;
   box-sizing: border-box;
