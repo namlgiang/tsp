@@ -14,9 +14,18 @@ var _items = [
   }
 ];
 
-
+var viewcontentfb = false;
 
 $(document).ready(function() {
+
+  $(window).scroll(function(e) {
+    if(!viewcontentfb && window.pageYOffset > $(".sale").offset().top - 500) {
+      console.log("View Content");
+      viewcontentfb = true;
+      fbq('track', 'ViewContent');
+    }
+  });
+
   $(".menu-toggle").click(function() {
     $(".menu").toggleClass("active");
   });
@@ -193,6 +202,7 @@ function updateCart() {
   }
   $(".bill-total").html(_total);
 
+  console.log("Add To Cart");
   ga('send', 'event', 'Add To Cart', 1);
   fbq('track', 'AddToCart', {
   value: _total,
