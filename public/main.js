@@ -85,9 +85,9 @@ paypal.Button.render({
         var env    = this.props.env;
         var client = this.props.client;
 
-        // ga('send', 'event', 'Purchase ' + colorName[color], quantity);
-        // fbq('track', 'InitiateCheckout');
-        // console.log('InitiateCheckout');
+        ga('send', 'event', 'Purchase ' + colorName[color], quantity);
+        fbq('track', 'InitiateCheckout');
+        console.log('InitiateCheckout');
 
         return paypal.rest.payment.create(env, client, {
             transactions: [
@@ -111,10 +111,10 @@ paypal.Button.render({
         // Optional: display a confirmation page here
 
         return actions.payment.execute().then(function() {
-            // fbq('track', 'Purchase', {
-            //   value: price*quantity,
-            //   currency: 'USD'
-            // });
+            fbq('track', 'Purchase', {
+              value: _total,
+              currency: 'USD'
+            });
             window.location.href = "/thankyou/";
         });
 
@@ -192,5 +192,11 @@ function updateCart() {
       item.find(".bill-qty").remove();
   }
   $(".bill-total").html(_total);
+
+  ga('send', 'event', 'Add To Cart', 1);
+  fbq('track', 'AddToCart', {
+  value: _total,
+  currency: 'USD'
+  });
 
 }
