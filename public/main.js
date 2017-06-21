@@ -22,6 +22,7 @@ $(document).ready(function() {
     if(!viewcontentfb && window.pageYOffset > $(".sale").offset().top - 500) {
       console.log("View Content");
       viewcontentfb = true;
+      ga('send', 'event', 'View Content', 1);
       fbq('track', 'ViewContent');
     }
   });
