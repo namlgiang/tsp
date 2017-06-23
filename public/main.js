@@ -41,6 +41,10 @@ $(document).ready(function() {
     $(".color div").removeClass("active");
     $(this).addClass("active");
     color = $(this).index(".color div");
+
+    console.log('Select ' + colorName[color]);
+    ga('send', 'event', 'Select ' + colorName[color], 1);
+
     $(".buy .image>div").removeClass("active");
     $(".buy .image>div:eq("+color+")").addClass("active");
   });
