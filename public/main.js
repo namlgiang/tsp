@@ -1,7 +1,7 @@
 var colorName = ["Titan Spinner Gold", "Titan Spinner Silver", "Titan Spinner Blue"];
 var color = 0;
 
-var price = 38.99;
+var price = 25.99;
 var quantity = [0,0,0];
 
 var _total = 0;
