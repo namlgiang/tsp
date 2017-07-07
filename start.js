@@ -18,8 +18,8 @@ app.get("/saletime", function(req, res) {
 
   // res.send((17 * 60 * 60 * 1000 - 50 * 1000).toString());
   res.send((
-    dayend.getTime() - now.getTime() +
-    5*60*60*1000
+    dayend.getTime() - now.getTime()
+    // 5*60*60*1000
   ).toString());
 
 });
