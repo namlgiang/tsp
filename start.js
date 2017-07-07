@@ -8,8 +8,8 @@ app.get("/saletime", function(req, res) {
   var now = new Date();
   var dayend = new Date();
 
-  now.setMinutes(now.getMinutes() + now.getTimezoneOffset() - 7*60);
-  dayend.setMinutes(dayend.getMinutes() + dayend.getTimezoneOffset() - 7*60)
+  now.setMinutes(now.getMinutes() + now.getTimezoneOffset() - 5*60);
+  dayend.setMinutes(dayend.getMinutes() + dayend.getTimezoneOffset() - 5*60)
 
   dayend.setHours(24);
   dayend.setMinutes(0);
